@@ -1,0 +1,22 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: SampleService
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    nonSecurePortEnabled: true
+    nonSecurePort: 8081
+    securePortEnabled: true
+    securePort: 8181
+    preferIpAddress: true
+ribbon:
+  IsSecure: false
+logging.level:
+  com.netflix.client: DEBUG
+  com.netflix.discovery: DEBUG
+  com.netflix.loadbalancer: DEBUG
+  org.springframework.cloud: DEBUG

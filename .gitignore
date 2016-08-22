@@ -1,0 +1,6 @@
+.gradle
+.idea
+classes
+client/build
+registry/build
+service/build
