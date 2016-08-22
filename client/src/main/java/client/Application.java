@@ -17,23 +17,23 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class Application {
 
-	@Autowired
-	SampleClient client;
+    @Autowired
+    SampleClient client;
 
-	@FeignClient(name = "SAMPLESERVICE")
-	interface SampleClient {
-		@RequestMapping(value = "/test", method = RequestMethod.GET)
-		String test();
-	}
+    @FeignClient(name = "SAMPLESERVICE")
+    interface SampleClient {
+        @RequestMapping(value = "/test", method = RequestMethod.GET)
+        String test();
+    }
 
-	public static void main(String[] args) throws Exception {
-		SpringApplication.run(Application.class, args);
-	}
+    public static void main(String[] args) throws Exception {
+        SpringApplication.run(Application.class, args);
+    }
 
     @RequestMapping(value = "/test", method = RequestMethod.GET)
     @ResponseBody
-	public String test() {
-		return client.test();
-	}
+    public String test() {
+        return client.test();
+    }
 
 }

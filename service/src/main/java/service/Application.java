@@ -11,15 +11,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @EnableDiscoveryClient
 @Controller
 public class Application {
-	
-	public static void main(String[] args) throws Exception {
-		SpringApplication.run(Application.class, args);
-	}
 
-	@RequestMapping("/test")
-	@ResponseBody
-	public String test() {
-		return "Hello world.";
-	}
+    public static void main(String[] args) throws Exception {
+        SpringApplication.run(Application.class, args);
+    }
+
+    @RequestMapping("/test")
+    @ResponseBody
+    public String test() {
+        return "Hello world.";
+    }
 
 }

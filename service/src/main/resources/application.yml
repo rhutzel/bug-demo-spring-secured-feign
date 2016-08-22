@@ -15,8 +15,3 @@ eureka:
     preferIpAddress: true
 ribbon:
   IsSecure: false
-logging.level:
-  com.netflix.client: DEBUG
-  com.netflix.discovery: DEBUG
-  com.netflix.loadbalancer: DEBUG
-  org.springframework.cloud: DEBUG
